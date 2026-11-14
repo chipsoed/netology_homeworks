@@ -31,7 +31,7 @@ root@netology:/home/user/custom_docker_images/custom_nginx#
 Вывод команды docker port custom-nginx-t2 отображает текущую настройку проброса портов для нашего контейнера. При первом запуске контейнера мы указывали, что порт 8080 хостовой системы будет пробрасывать подключение на 80 порт контейнера. Эту настройку мы не меняли, поэтому здесь никаких проблем нет. 
 Команда curl http://127.0.0.1:8080 отображает сброс соединения целевым хостом. Так происходит, потому что порт 80 на контейнере перестал слушать после изменения конфигурационного файла. Теперь контейнер слушает на 81 первом порту. 
 
-Задача 4.
+Задача 4. Скриншот Снимок экрана 2026-11-14 124454.png
 root@netology:/home/user/custom_docker_images/custom_nginx# docker pull debian:stable-slim
 stable-slim: Pulling from library/debian
 2ec981fa50fa: Pull complete 
@@ -82,7 +82,7 @@ Desktop  Documents  Downloads  Music  Pictures	Public	Templates  Videos  custom_
 root@287e2d710c78:/# 
 
 
-Задача 5.
+Задача 5. 
 1. Если в одной директории существуют два файла .yaml, Compose отдаёт предпочтение compose.yaml . Поэтому при выполнении docker compose up -d без явного указания файла система автоматически выбрала compose.yaml. Развернется один контейнре - portainer.
 2. Директива include позволяет встроить один файл Compose в другой . Когда запускаетcz docker compose up -d, Compose читает основной файл compose.yaml, видит там инструкцию include и подгружает указанный файл docker-compose.yam, добавляя все его серdbcs в общую модель приложения.
 3. 
