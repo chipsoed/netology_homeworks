@@ -1,0 +1,103 @@
+root@netology:/tmp/netology/05-virt-04/shvirtd-example-python-main# python3 -m venv venv
+root@netology:/tmp/netology/05-virt-04/shvirtd-example-python-main# source venv/bin/activate
+(venv) root@netology:/tmp/netology/05-virt-04/shvirtd-example-python-main# pip install -r requirements.txt 
+Collecting fastapi==0.104.1
+  Downloading fastapi-0.104.1-py3-none-any.whl (92 kB)
+     |████████████████████████████████| 92 kB 1.1 MB/s 
+Collecting uvicorn[standard]==0.24.0
+  Downloading uvicorn-0.24.0-py3-none-any.whl (59 kB)
+     |████████████████████████████████| 59 kB 6.1 MB/s 
+Collecting mysql-connector-python==8.2.0
+  Downloading mysql_connector_python-8.2.0-py2.py3-none-any.whl (593 kB)
+     |████████████████████████████████| 593 kB 12.7 MB/s 
+Collecting typing-extensions>=4.8.0
+  Downloading typing_extensions-4.13.2-py3-none-any.whl (45 kB)
+     |████████████████████████████████| 45 kB 6.4 MB/s 
+Collecting anyio<4.0.0,>=3.7.1
+  Downloading anyio-3.7.1-py3-none-any.whl (80 kB)
+     |████████████████████████████████| 80 kB 10.9 MB/s 
+Collecting starlette<0.28.0,>=0.27.0
+  Downloading starlette-0.27.0-py3-none-any.whl (66 kB)
+     |████████████████████████████████| 66 kB 11.6 MB/s 
+Collecting pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,!=2.1.0,<3.0.0,>=1.7.4
+  Downloading pydantic-2.10.6-py3-none-any.whl (431 kB)
+     |████████████████████████████████| 431 kB 4.9 MB/s 
+Collecting h11>=0.8
+  Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Collecting click>=7.0
+  Downloading click-8.1.8-py3-none-any.whl (98 kB)
+     |████████████████████████████████| 98 kB 12.4 MB/s 
+Collecting uvloop!=0.15.0,!=0.15.1,>=0.14.0; sys_platform != "win32" and (sys_platform != "cygwin" and platform_python_implementation != "PyPy") and extra == "standard"
+  Downloading uvloop-0.23.0-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.1 MB)
+     |████████████████████████████████| 4.1 MB 8.0 MB/s 
+Collecting python-dotenv>=0.13; extra == "standard"
+  Downloading python_dotenv-1.0.1-py3-none-any.whl (19 kB)
+Collecting httptools>=0.5.0; extra == "standard"
+  Downloading httptools-0.6.4-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (453 kB)
+     |████████████████████████████████| 453 kB 12.0 MB/s 
+Collecting watchfiles>=0.13; extra == "standard"
+  Downloading watchfiles-0.24.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (426 kB)
+     |████████████████████████████████| 426 kB 13.9 MB/s 
+Collecting websockets>=10.4; extra == "standard"
+  Downloading websockets-13.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (164 kB)
+     |████████████████████████████████| 164 kB 34.1 MB/s 
+Collecting pyyaml>=5.1; extra == "standard"
+  Downloading PyYAML-6.0.3-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+     |████████████████████████████████| 806 kB 42.0 MB/s 
+Collecting protobuf<=4.21.12,>=4.21.1
+  Downloading protobuf-4.21.12-cp37-abi3-manylinux2014_x86_64.whl (409 kB)
+     |████████████████████████████████| 409 kB 22.1 MB/s 
+Collecting exceptiongroup; python_version < "3.11"
+  Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Collecting sniffio>=1.1
+  Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Collecting idna>=2.8
+  Downloading idna-3.15-py3-none-any.whl (72 kB)
+     |████████████████████████████████| 72 kB 1.4 MB/s 
+Collecting annotated-types>=0.6.0
+  Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Collecting pydantic-core==2.27.2
+  Downloading pydantic_core-2.27.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+     |████████████████████████████████| 2.0 MB 54.9 MB/s 
+Installing collected packages: typing-extensions, exceptiongroup, sniffio, idna, anyio, starlette, annotated-types, pydantic-core, pydantic, fastapi, h11, click, uvloop, python-dotenv, httptools, watchfiles, websockets, pyyaml, uvicorn, protobuf, mysql-connector-python
+Successfully installed annotated-types-0.7.0 anyio-3.7.1 click-8.1.8 exceptiongroup-1.3.1 fastapi-0.104.1 h11-0.16.0 httptools-0.6.4 idna-3.15 mysql-connector-python-8.2.0 protobuf-4.21.12 pydantic-2.10.6 pydantic-core-2.27.2 python-dotenv-1.0.1 pyyaml-6.0.3 sniffio-1.3.1 starlette-0.27.0 typing-extensions-4.13.2 uvicorn-0.24.0 uvloop-0.23.0 watchfiles-0.24.0 websockets-13.1
+(venv) root@netology:/tmp/netology/05-virt-04/shvirtd-example-python-main# export DB_HOST='127.0.0.1'
+(venv) root@netology:/tmp/netology/05-virt-04/shvirtd-example-python-main# export DB_USER='app'
+(venv) root@netology:/tmp/netology/05-virt-04/shvirtd-example-python-main# export DB_PASSWORD='very_strong'
+(venv) root@netology:/tmp/netology/05-virt-04/shvirtd-example-python-main# export DB_NAME='example'
+(venv) root@netology:/tmp/netology/05-virt-04/shvirtd-example-python-main# uvicorn main:app --host 0.0.0.0 --port 5000 --reload
+INFO:     Will watch for changes in these directories: ['/tmp/netology/05-virt-04/shvirtd-example-python-main']
+INFO:     Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+INFO:     Started reloader process [9600] using WatchFiles
+INFO:     Started server process [9602]
+INFO:     Waiting for application startup.
+Приложение запускается...
+Соединение с БД установлено и таблица 'requests' готова к работе.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:52298 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56116 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56130 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:41294 - "GET /requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40732 - "GET / HTTP/1.1" 200 OK
+^CINFO:     Shutting down
+INFO:     Waiting for application shutdown.
+Приложение останавливается.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [9602]
+INFO:     Stopping reloader process [9600]
+(venv) root@netology:/tmp/netology/05-virt-04/shvirtd-example-python-main# uvicorn main:app --host 0.0.0.0 --port 5000 --reload
+INFO:     Will watch for changes in these directories: ['/tmp/netology/05-virt-04/shvirtd-example-python-main']
+INFO:     Uvicorn running on http://0.0.0.0:5000 (Press CTRL+C to quit)
+INFO:     Started reloader process [14969] using WatchFiles
+INFO:     Started server process [14971]
+INFO:     Waiting for application startup.
+Приложение запускается...
+Соединение с БД установлено и таблица 'requests' готова к работе.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:44332 - "GET / HTTP/1.1" 200 OK
+^CINFO:     Shutting down
+INFO:     Waiting for application shutdown.
+Приложение останавливается.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [14971]
+INFO:     Stopping reloader process [14969]
